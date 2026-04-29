@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!✧𝓐𝓬𝓮𝓼✧! | The Archives</title>
+    <style>
+        :root {
+            --blood: #8b0000;
+            --void: #0a0505;
+            --ghost: #e0e0e0;
+        }
+
+        body {
+            margin: 0;
+            background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1973&auto=format&fit=crop') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--ghost);
+            font-family: 'Georgia', serif;
+            text-align: center;
+        }
+
+        .overlay {
+            background: rgba(5, 0, 0, 0.9);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .pfp {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid var(--blood);
+            box-shadow: 0 0 15px var(--blood);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: var(--blood);
+            text-shadow: 2px 2px 10px #000;
+        }
+
+        .tab-container {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+            border-bottom: 1px solid var(--blood);
+            padding-bottom: 10px;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 1px solid var(--blood);
+            color: var(--blood);
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Georgia', serif;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--blood);
+            color: white;
+            box-shadow: 0 0 10px var(--blood);
+        }
+
+        .content-box {
+            margin-top: 30px;
+            min-height: 250px;
+            max-width: 650px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #bbb;
+        }
+
+        .link-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .link-grid a {
+            padding: 12px;
+            background: #1a0101;
+            color: var(--blood);
+            text-decoration: none;
+            border: 1px solid var(--blood);
+            font-size: 0.85em;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .link-grid a:hover {
+            background: var(--blood);
+            color: #fff;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        ul li {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: var(--blood);
+        }
+
+        ul li span {
+            color: var(--ghost);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+        <img src="https://i.ibb.co/r2HJZTjb/download.jpg" alt="Aces" class="pfp">
+        <h1>!✧𝓐𝓬𝓮𝓼✧!</h1>
+
+        <div class="tab-container">
+            <button class="tab-btn active" onclick="openTab(event, 'about')">About Me</button>
+            <button class="tab-btn" onclick="openTab(event, 'doing')">What I Do</button>
+            <button class="tab-btn" onclick="openTab(event, 'socials')">Social Links</button>
+        </div>
+
+        <div class="content-box">
+            <div id="about" class="tab-content active">
+                <p>Why hello there, I’m Aces — Roblox, Unity developer and a web developer, along with exploring Blender. I love creating games, making songs, codeing, and I have a few years of experience with C#, HTML, LUA, JS, CSS and many more. And yes, this is a custom Website.</p>
+            </div>
+
+            <div id="doing" class="tab-content">
+                <ul>
+                    <li>✦ <span>Roblox & Unity Development</span></li>
+                    <li>✦ <span>Web Architecture (HTML/CSS/JS)</span></li>
+                    <li>✦ <span>Blender 3D Modeling</span></li>
+                    <li>✦ <span>Music Composition</span></li>
+                    <li>✦ <span>Programming: C#, Luau, JS, CSS</span></li>
+                </ul>
+            </div>
+
+            <div id="socials" class="tab-content">
+                <div class="link-grid">
+                    <a href="https://www.roblox.com/users/3894530718/profile" target="_blank">My Roblox</a>
+                    <a href="https://discord.com/users/1111664233264980139" target="_blank">My Discord</a>
+                    <a href="https://discord.gg/adE846jsYv" target="_blank">Pixel Dev Games Discord Server</a>
+                    <a href="https://discord.gg/mEyH4ZHrr6" target="_blank">Aces Discord Server</a>
+                    <a href="https://www.roblox.com/communities/35541563/Pixel-Dev-Games" target="_blank">Pixel Dev Games Roblox Group</a>
+                    <a href="https://www.roblox.com/communities/704000256/Aces-Official" target="_blank">Aces Roblox Group</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+</html>
