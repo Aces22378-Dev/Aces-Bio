@@ -9,6 +9,9 @@
             --blood: #8b0000;
             --void: #0a0505;
             --ghost: #e0e0e0;
+            /* Aces Medal Theme for Founder Medal */
+            --medal-bg: #000000;
+            --medal-accent: #ff0000;
         }
 
         body {
@@ -40,6 +43,14 @@
             margin-bottom: 20px;
         }
 
+        .name-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
         h1 {
             font-size: 2.5em;
             margin: 0;
@@ -47,7 +58,24 @@
             text-shadow: 2px 2px 10px #000;
         }
 
-        /* The new prominent button under your name */
+        /* Founder Medal Styling */
+        .medal {
+            background: var(--medal-bg);
+            color: var(--medal-accent);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.4em;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: 1px solid var(--medal-accent);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+            vertical-align: middle;
+            display: inline-block;
+            text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
         .header-cta {
             display: inline-block;
             margin-top: 15px;
@@ -176,9 +204,12 @@
 
     <div class="overlay">
         <img src="https://i.ibb.co/r2HJZTjb/download.jpg" alt="Aces" class="pfp">
-        <h1>!✧𝓐𝓬𝓮𝓼✧!</h1>
         
-        <a href="https://aces22378-dev.github.io/Get-a-bio/" target="_blank" class="header-cta">Get your own bio today for free with Aces</a>
+        <div class="name-container">
+            <h1>!✧𝓐𝓬𝓮𝓼✧! <span class="medal">Founder</span></h1>
+        </div>
+        
+        <a href="https://aces22378-dev.github.io/Get-a-bio/" target="_blank" class="header-cta">Get your own bio today for free with me.</a>
 
         <div class="tab-container">
             <button class="tab-btn active" onclick="openTab(event, 'about')">About Me</button>
