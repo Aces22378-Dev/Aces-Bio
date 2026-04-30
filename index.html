@@ -10,6 +10,8 @@
             --void: #0a0505;
             --ghost: #e0e0e0;
             --card-glow: rgba(139, 0, 0, 0.5);
+            --gold: #ffd700;
+            --silver-glow: rgba(255, 255, 255, 0.6);
         }
 
         body {
@@ -103,7 +105,7 @@
             margin-top: 30px;
             min-height: 250px;
             width: 100%;
-            max-width: 650px;
+            max-width: 700px;
             animation: fadeIn 0.8s ease-in-out;
         }
 
@@ -128,13 +130,13 @@
         .role-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 0 15px var(--blood);
-            background: rgba(30, 0, 0, 0.9);
         }
 
+        /* PREMIUM GLOWING SILVER CARDS */
         .role-card.special {
-            border: 2px solid #e0e0e0;
-            box-shadow: 0 0 15px rgba(224, 224, 224, 0.3);
             background: linear-gradient(135deg, rgba(139, 0, 0, 0.4), rgba(10, 5, 5, 0.8));
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 15px var(--silver-glow);
         }
 
         .role-card h3 {
@@ -147,8 +149,11 @@
 
         .role-card.special h3 {
             color: #fff;
-            text-shadow: 0 0 8px var(--blood);
+            text-shadow: 0 0 8px #ffffff;
         }
+
+        .role-card.early { border-color: var(--gold); }
+        .role-card.early h3 { color: var(--gold); }
 
         .role-card p {
             margin: 0;
@@ -157,13 +162,8 @@
             line-height: 1.3;
         }
 
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -211,15 +211,8 @@
             display: inline-block;
         }
 
-        ul li {
-            margin: 10px 0;
-            font-size: 1.1em;
-            color: var(--blood);
-        }
-
-        ul li span {
-            color: var(--ghost);
-        }
+        ul li { margin: 10px 0; font-size: 1.1em; color: var(--blood); }
+        ul li span { color: var(--ghost); }
     </style>
 </head>
 <body>
@@ -236,7 +229,7 @@
             <button class="tab-btn" onclick="openTab(event, 'doing')">What I Do</button>
             <button class="tab-btn" onclick="openTab(event, 'cards')">Cards</button>
             <button class="tab-btn" onclick="openTab(event, 'socials')">Social Links</button>
-            <button class="tab-btn" onclick="openTab(event, 'license')">License✓ & Free Scripts</button>
+            <button class="tab-btn" onclick="openTab(event, 'license')">License✓ & Scripts</button>
             <button class="tab-btn" onclick="openTab(event, 'claims')">Website Claims ✓</button>
         </div>
 
@@ -260,17 +253,17 @@
                         <h3>Founder</h3>
                         <p>The original creator and visionary.</p>
                     </div>
-                    <div class="role-card">
-                        <h3>Lead Dev</h3>
-                        <p>Head of all technical operations.</p>
+                    <div class="role-card early">
+                        <h3>Early Supporter</h3>
+                        <p>One of the first to join the journey.</p>
                     </div>
-                    <div class="role-card">
-                        <h3>Staff</h3>
-                        <p>Global administration and management.</p>
+                    <div class="role-card special">
+                        <h3>Aces' Respect</h3>
+                        <p>Awarded for excellence in development.</p>
                     </div>
                     <div class="role-card special">
                         <h3>Lillian's Respect</h3>
-                        <p>Recognition of excellence from the Co-Founder.</p>
+                        <p>Recognition from the Co-Founder.</p>
                     </div>
                 </div>
             </div>
@@ -292,8 +285,12 @@
 
             <div id="claims" class="tab-content">
                 <div class="link-grid">
-                    <a href="https://aces22378-dev.github.io/Lillian-Bio/" target="_blank">Lillian Bio ✓</a>
+                    <a href="https://github.com/Aces22378-Dev/Scripts" target="_blank">Scripts Hub ✓</a>
                     <a href="https://aces22378-dev.github.io/GitHub-Team/" target="_blank">GitHub Team Page ✓</a>
+                    <a href="https://knowledgequest.neocities.org/" target="_blank">Knowledge Quest™ ✓</a>
+                    <a href="https://aces22378-dev.github.io/Lillian-Bio/" target="_blank">Lillian Bio ✓</a>
+                    <a href="https://aces22378-dev.github.io/Loccgodzilla-Bio/" target="_blank">Loccgodzilla Bio ✓</a>
+                    <a href="https://aces22378-dev.github.io/Rex-Bio/" target="_blank">Rex Bio ✓</a>
                 </div>
             </div>
         </div>
