@@ -13,7 +13,8 @@
 
         body {
             margin: 0;
-            background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1973&auto=format&fit=crop') no-repeat center center fixed;
+            /* Using your provided image link */
+            background: url('https://i.ibb.co/6RjVn9dJ/download.jpg') no-repeat center center fixed;
             background-size: cover;
             color: var(--ghost);
             font-family: 'Georgia', serif;
@@ -21,13 +22,15 @@
         }
 
         .overlay {
-            background: rgba(5, 0, 0, 0.9);
+            /* Lightened from 0.9 to 0.4 to let the background shine through */
+            background: rgba(5, 0, 0, 0.4); 
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            backdrop-filter: blur(2px); /* Added a tiny blur for a modern look */
         }
 
         .pfp {
@@ -57,7 +60,7 @@
         }
 
         .tab-btn {
-            background: transparent;
+            background: rgba(0, 0, 0, 0.6); /* Added a dark backing so buttons are visible */
             border: 1px solid var(--blood);
             color: var(--blood);
             padding: 10px 20px;
@@ -99,7 +102,8 @@
         p {
             font-size: 1.1em;
             line-height: 1.6;
-            color: #bbb;
+            color: #fff; /* Brightened text */
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.8); /* Added shadow for readability */
         }
 
         .link-grid {
@@ -110,7 +114,7 @@
 
         .link-grid a {
             padding: 12px;
-            background: #1a0101;
+            background: rgba(26, 1, 1, 0.8); /* Slightly transparent links */
             color: var(--blood);
             text-decoration: none;
             border: 1px solid var(--blood);
@@ -129,7 +133,9 @@
 
         ul {
             list-style: none;
-            padding: 0;
+            padding: 20px;
+            background: rgba(0,0,0,0.5); /* Darkened list area for focus */
+            border-radius: 10px;
             text-align: left;
             display: inline-block;
         }
@@ -161,15 +167,14 @@
 
         <div class="content-box">
             <div id="about" class="tab-content active">
-                <p>Why hello there, I’m Aces — Roblox, Unity developer and a web developer, along with exploring Blender. I love creating games, making songs, coding, and I have a few years of experience with C#, HTML, LUA, JS, CSS and many more. NOTE: ✓ means real not verified.</p>
+                <p>Why hello there, I’m Aces — Roblox, Unity developer and a web developer, along with exploring Blender. I love creating games, making songs, coding, and I have a few years of experience with C#, HTML, LUA, JS, CSS and many more. <br><br><strong>NOTE:</strong> ✓ means real not verified.</p>
             </div>
 
             <div id="doing" class="tab-content">
                 <ul>
                     <li>✦ <span>Roblox & Unity Development</span></li>
                     <li>✦ <span>Web Architecture (HTML/CSS/JS)</span></li>
-                  <li>✦ <span>Bio websites for people(Free). <li>✦ <span>Roblox & Unity Development</span></li>
-                  </span></li>
+                    <li>✦ <span>Bio websites for people (Free)</span></li>
                     <li>✦ <span>Blender 3D Modeling</span></li>
                     <li>✦ <span>Music Composition</span></li>
                     <li>✦ <span>Programming: C#, Luau, JS, CSS</span></li>
