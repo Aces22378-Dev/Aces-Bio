@@ -13,7 +13,6 @@
 
         body {
             margin: 0;
-            /* Using your provided image link */
             background: url('https://i.ibb.co/jPnZzLcQ/851daf4a-e493-4542-a9f2-0337717ad101.png') no-repeat center center fixed;
             background-size: cover;
             color: var(--ghost);
@@ -22,7 +21,6 @@
         }
 
         .overlay {
-            /* Lightened from 0.9 to 0.4 to let the background shine through */
             background: rgba(5, 0, 0, 0.4); 
             min-height: 100vh;
             display: flex;
@@ -30,7 +28,7 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
-            backdrop-filter: blur(2px); /* Added a tiny blur for a modern look */
+            backdrop-filter: blur(2px);
         }
 
         .pfp {
@@ -49,6 +47,29 @@
             text-shadow: 2px 2px 10px #000;
         }
 
+        /* The new prominent button under your name */
+        .header-cta {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 25px;
+            background: var(--blood);
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-radius: 5px;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.6);
+        }
+
+        .header-cta:hover {
+            background: white;
+            color: var(--blood);
+            box-shadow: 0 0 25px white;
+            transform: scale(1.05);
+        }
+
         .tab-container {
             margin-top: 30px;
             display: flex;
@@ -60,7 +81,7 @@
         }
 
         .tab-btn {
-            background: rgba(0, 0, 0, 0.6); /* Added a dark backing so buttons are visible */
+            background: rgba(0, 0, 0, 0.6);
             border: 1px solid var(--blood);
             color: var(--blood);
             padding: 10px 20px;
@@ -102,8 +123,8 @@
         p {
             font-size: 1.1em;
             line-height: 1.6;
-            color: #fff; /* Brightened text */
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.8); /* Added shadow for readability */
+            color: #fff;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
         }
 
         .link-grid {
@@ -114,7 +135,7 @@
 
         .link-grid a {
             padding: 12px;
-            background: rgba(26, 1, 1, 0.8); /* Slightly transparent links */
+            background: rgba(26, 1, 1, 0.8);
             color: var(--blood);
             text-decoration: none;
             border: 1px solid var(--blood);
@@ -134,7 +155,7 @@
         ul {
             list-style: none;
             padding: 20px;
-            background: rgba(0,0,0,0.5); /* Darkened list area for focus */
+            background: rgba(0,0,0,0.5);
             border-radius: 10px;
             text-align: left;
             display: inline-block;
@@ -156,6 +177,8 @@
     <div class="overlay">
         <img src="https://i.ibb.co/r2HJZTjb/download.jpg" alt="Aces" class="pfp">
         <h1>!✧𝓐𝓬𝓮𝓼✧!</h1>
+        
+        <a href="https://aces22378-dev.github.io/Get-a-bio/" target="_blank" class="header-cta">Get a bio today!</a>
 
         <div class="tab-container">
             <button class="tab-btn active" onclick="openTab(event, 'about')">About Me</button>
@@ -205,7 +228,6 @@
                 <div class="link-grid">
                     <a href="https://github.com/Aces22378-Dev/Scripts" target="_blank">Scripts Hub ✓</a>
                     <a href="https://aces22378-dev.github.io/GitHub-Team/" target="_blank">GitHub Team Page ✓</a>
-<a href="https://aces22378-dev.github.io/Get-a-bio//" target="_blank">Get a bio ✓</a>
                     <a href="https://knowledgequest.neocities.org/" target="_blank">Knowledge Quest™ ✓</a>
                     <a href="https://aces22378-dev.github.io/Lillian-Bio/" target="_blank">Lillian Bio ✓</a>
                     <a href="https://aces22378-dev.github.io/Loccgodzilla-Bio/" target="_blank">Loccgodzilla Bio ✓</a>
