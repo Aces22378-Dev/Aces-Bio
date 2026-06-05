@@ -155,6 +155,22 @@
             border-color: white;
         }
 
+        /* Notes Tab Specific Styling */
+        .notes-list {
+            text-align: left;
+            width: 100%;
+        }
+        .notes-list li {
+            color: var(--text-ghost);
+            font-weight: 400;
+            border-left: 3px solid var(--blood);
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+        .notes-list strong {
+            color: var(--gold);
+        }
+
         .tab-content { display: none; }
         .tab-content.active { display: block; }
 
@@ -174,6 +190,7 @@
         <div class="tab-container">
             <button class="tab-btn active" onclick="openTab(event, 'about')">About Me</button>
             <button class="tab-btn" onclick="openTab(event, 'doing')">What I Do</button>
+            <button class="tab-btn" onclick="openTab(event, 'notes')">Notes & Considerations</button> 
             <button class="tab-btn" onclick="openTab(event, 'socials')">Social Links</button>
         </div>
 
@@ -195,9 +212,16 @@
                     <a href="https://www.roblox.com/users/3894530718/profile" target="_blank">My Roblox</a>
                     <a href="https://discord.com/users/1111664233264980139" target="_blank">My Discord</a>
                     <a href="https://github.com/Aces22378-Dev" target="_blank">My GitHub</a>
-                     <a 
-href="https://www.youtube.com/@The_Only_Aces22378" target="_blank">My Youtube</a>
+                    <a href="https://www.youtube.com/@The_Only_Aces22378" target="_blank">My Youtube</a>
                 </div>
+            </div>
+
+            <div id="notes" class="tab-content">
+                <ul class="notes-list">
+                    <li><strong>Hiring Status:</strong> Currently closed, but feel free to pitch project ideas on Discord.</li>
+                    <li><strong>Response Time:</strong> I usually reply within 24 hours.</li>
+                    <li><strong>Note:</strong> Random DM's & friend requests may be ignored.</li>
+                </ul>
             </div>
         </div>
     </div>
